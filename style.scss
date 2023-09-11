@@ -1,0 +1,144 @@
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+.globalWindow {
+  margin-top: 100px;
+  margin-left: calc(50% - 500px / 2);
+  width: 500px;
+  height: 600px;
+  border-radius: 10px;
+  overflow: auto;
+  color: white;
+  position: relative;
+  background-color: aqua;
+
+  .inputWindow {
+    z-index: 200;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: 600px;
+    background-color: rgb(20, 36, 70);
+
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+    .inputWindowHeader {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .inputWindowMain {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 300px;
+      }
+    }
+  }
+
+  .upper {
+    display: flex;
+    flex-direction: column;
+    background: url(./img/figure1.svg) no-repeat center/cover;
+    height: 300px;
+    position: relative;
+    padding: 10px 20px;
+
+    #openButton {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      width: 40px;
+      border: 0px;
+      background-color: transparent;
+      color: white;
+    }
+
+    p {
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      .town {
+        background-color: rgb(159, 53, 53);
+        color: white;
+        font-size: 38px;
+        padding: 5px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        font-weight: bold;
+      }
+      .country {
+        background-color: rgb(159, 53, 53);
+        color: white;
+        font-size: 38px;
+        padding: 5px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-weight: bold;
+      }
+    }
+
+    .upperInfo {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 90px;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .description {
+          font-size: 28px;
+        }
+      }
+
+      .right {
+        .mainTemp {
+          font-size: 38px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .lover {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    position: relative;
+    color: rgb(59, 30, 10);
+
+    .left,
+    .right {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h5 {
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(8, 81, 94);
+      }
+    }
+  }
+}
