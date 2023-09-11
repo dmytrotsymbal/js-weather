@@ -42,13 +42,15 @@ input.addEventListener("input", (e) => {
       let globalWindow = document.querySelector(".globalWindow");
 
       if (data.main.temp <= 10) {
-        globalWindow.style.backgroundColor = "blue";
+        globalWindow.style.backgroundColor = "rgb(189, 176, 212)";
       } else if (data.main.temp <= 0) {
-        globalWindow.style.backgroundColor = "red";
+        globalWindow.style.backgroundColor = "rgb(36, 98, 114)";
       } else if (data.main.temp > 10 && data.main.temp <= 20) {
-        globalWindow.style.backgroundColor = "green";
+        globalWindow.style.backgroundColor = "rgb(7, 186, 186)";
       } else if (data.main.temp > 20 && data.main.temp <= 30) {
-        globalWindow.style.backgroundColor = "yellow";
+        globalWindow.style.backgroundColor = "aqua";
+      } else if (data.main.temp > 30) {
+        globalWindow.style.backgroundColor = "rgb(225, 189, 32)";
       }
 
       let logo = document.querySelector(".logo");
