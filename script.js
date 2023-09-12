@@ -1,14 +1,17 @@
 const input = document.querySelector("#cityInput");
+const searchButton = document.querySelector("#searchButton");
 
-input.addEventListener("input", (e) => {
-  cityName = e.target.value;
-
+searchButton.addEventListener("click", () => {
+  let cityName = input.value;
+  inputWindow.style.transform = "translateX(-400px)";
   fetch(
     `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=5d066958a60d315387d9492393935c19`
   )
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+
+      //----------------------------------------------------------------------
 
       let town = document.querySelector(".town");
       town.innerHTML = data.name + ", ";
@@ -99,11 +102,11 @@ let closeButton = document.getElementById("closeButton");
 let inputWindow = document.getElementById("inputWindow");
 
 closeButton.addEventListener("click", () => {
-  inputWindow.style.display = "none";
+  inputWindow.style.transform = "translateX(-400px)";
 });
 
 let openButton = document.getElementById("openButton");
 
 openButton.addEventListener("click", () => {
-  inputWindow.style.display = "block";
+  inputWindow.style.transform = "translateX(0px)";
 });

@@ -21,10 +21,10 @@
     width: 400px;
     height: 600px;
     background-color: rgb(20, 36, 70);
-
     display: flex;
     flex-direction: column;
-    display: none;
+    transform: translateX(0px);
+    transition: all 0.5s;
 
     .inputWindowHeader {
       width: 100%;
@@ -48,11 +48,15 @@
       width: 100%;
       height: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
 
       input {
-        width: 300px;
+        width: 200px;
+      }
+
+      #searchButton {
+        width: 75px;
       }
     }
   }
@@ -68,7 +72,7 @@
     #openButton {
       position: absolute;
       right: 20px;
-      top: 10px;
+      top: 5px;
       width: 40px;
       height: 40px;
       border: 0px;
@@ -104,6 +108,10 @@
       }
     }
 
+    .logo {
+      width: 70px;
+    }
+
     .upperInfo {
       margin-top: 40px;
       display: flex;
@@ -125,7 +133,8 @@
 
       .right {
         .mainTemp {
-          font-size: 38px;
+          font-size: 42px;
+          margin: 0px;
           font-weight: bold;
         }
       }
