@@ -38,6 +38,17 @@ searchButton.addEventListener("click", () => {
         let description = document.querySelector(".description");
         description.innerHTML = data.weather[0].main;
 
+        let upper = document.querySelector(".upper");
+        if (
+          description.innerHTML === "Clear" ||
+          description.innerHTML === "scattered clouds" ||
+          description.innerHTML === "Snow"
+        ) {
+          upper.style.backgroundImage = "url(./img/figure2.svg)";
+        } else {
+          upper.style.backgroundImage = "url(./img/figure1.svg)";
+        }
+
         //----------------------------------------------------------------------
 
         let temp_min = document.querySelector(".temp_min");

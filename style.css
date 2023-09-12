@@ -208,4 +208,42 @@
   border-radius: 4px;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .globalWindow {
+    width: 100%;
+    margin: auto;
+    border-radius: 0%;
+  }
+  .globalWindow .inputWindow {
+    width: 100%;
+  }
+  .globalWindow .lover {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    position: relative;
+    color: rgb(59, 30, 10);
+  }
+  .globalWindow .lover .left,
+  .globalWindow .lover .right {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .globalWindow .lover .left .iconImg,
+  .globalWindow .lover .right .iconImg {
+    width: 25px;
+  }
+  .globalWindow .lover .left h5,
+  .globalWindow .lover .right h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(8, 81, 94);
+  }
 }/*# sourceMappingURL=style.css.map */

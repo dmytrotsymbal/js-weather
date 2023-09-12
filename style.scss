@@ -234,3 +234,44 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .globalWindow {
+    width: 100%;
+    margin: auto;
+    border-radius: 0%;
+
+    .inputWindow {
+      width: 100%;
+    }
+
+    .lover {
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 300px;
+      position: relative;
+      color: rgb(59, 30, 10);
+
+      .left,
+      .right {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .iconImg {
+          width: 25px;
+        }
+
+        h5 {
+          font-size: 15px;
+          font-weight: 600;
+          color: rgb(8, 81, 94);
+        }
+      }
+    }
+  }
+}
