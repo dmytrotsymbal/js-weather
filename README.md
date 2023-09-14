@@ -14,8 +14,10 @@ npm install
 
 ## Preview
 
-![Kyiv](/img/Kyiv.png)
-![London](/img/London.png)
+![New York morning](/img/screens/NY.png)
+![London day](/img/screens/London.png)
+![Dubai evening](/img/screens/Dubai.png)
+![Hawaii night](/img/screens/Hawaii.png)
 
 <!-- ## Functions
 
