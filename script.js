@@ -32,6 +32,38 @@ searchButton.addEventListener("click", () => {
         let logo = document.querySelector(".logo");
         logo.src =
           "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
+
+        //------------------------------------------------------------------------------------------------
+        const timezoneSeconds = data.timezone; // Смещение в секундах
+
+        // Преобразовать смещение времени из секунд в минуты
+        const timezoneMinutes = timezoneSeconds / 60;
+
+        // Создайте объект JavaScript Date для текущего UTC времени
+        const currentUTC = new Date();
+
+        // Примените смещение временной зоны в минутах, чтобы получить местное время
+        const localTime = new Date(
+          currentUTC.getTime() + timezoneMinutes * 60000
+        );
+
+        // Отнять 3 часа в миллисекундах
+        const modifiedLocalTime = new Date(localTime.getTime() - 10800000);
+
+        // Отобразите измененное время на веб-странице
+        const modifiedLocalTimeElement =
+          document.querySelector(".modifiedLocalTime");
+
+        // Форматирование времени в формат HH:mm
+        const hours = modifiedLocalTime.getHours();
+        const minutes = modifiedLocalTime.getMinutes();
+
+        const formattedTime = `Local time : <b>${hours} : ${minutes}</b>`;
+
+        modifiedLocalTimeElement.innerHTML = formattedTime;
+
+        //------------------------------------------------------------------------------------------------
+
         let mainTemp = document.querySelector(".mainTemp");
         mainTemp.innerHTML = data.main.temp + " °";
 
