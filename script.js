@@ -62,6 +62,32 @@ searchButton.addEventListener("click", () => {
 
         modifiedLocalTimeElement.innerHTML = formattedTime;
 
+        const getBackgroundColor = () => {
+          const hours = modifiedLocalTime.getHours();
+
+          let backgroundImage;
+
+          if (hours >= 6 && hours < 12) {
+            // Утро
+            backgroundImage = "url('/img/morning.jpg')";
+          } else if (hours >= 12 && hours < 18) {
+            // День
+            backgroundImage = "url('/img/day.jpg')";
+          } else if (hours >= 18 && hours < 22) {
+            // Вечер
+            backgroundImage = "url('/img/evening.jpg')";
+          } else {
+            // Ночь
+            backgroundImage = "url('/img/night.jpg')";
+          }
+
+          return backgroundImage;
+        };
+
+        // Установите цвет фона при загрузке страницы
+        const globalBackground = document.querySelector(".globalBackground");
+        globalBackground.style.backgroundImage = getBackgroundColor();
+
         //------------------------------------------------------------------------------------------------
 
         let mainTemp = document.querySelector(".mainTemp");
@@ -165,3 +191,5 @@ let openButton = document.getElementById("openButton");
 openButton.addEventListener("click", () => {
   inputWindow.style.transform = "translateX(0px)";
 });
+
+//-----------------------------------------------------------------------------------------------------------
